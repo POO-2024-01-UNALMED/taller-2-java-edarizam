@@ -10,10 +10,7 @@ public class Asiento {
 		
 		boolean validarColor = (color.equalsIgnoreCase("rojo") ||color.equalsIgnoreCase("amarillo") || color.equalsIgnoreCase("verde") || color.equalsIgnoreCase("negro") || color.equalsIgnoreCase("blanco"))? true : false;
 		if (validarColor){
-			System.out.println("El color ha sido cambiado a: " + color);
-		}else{
-			System.out.println("El color no puede ser cambiado a: " + color);
-			color = null;
+			this.color = color;
 		}
 
 		/*

@@ -11,7 +11,6 @@ public class Auto {
 	
 	static int cantidadCreados;
 	
-	//Corregido
 	public int cantidadAsientos() {
 		int contadorAsientos = 0;
 		for(Asiento asiento:asientos) {
@@ -22,7 +21,6 @@ public class Auto {
 		return contadorAsientos;
 	}
 	
-	//Malo
 	public String verificarIntegridad() {
 		
 		String mensajeValidacion = null;
