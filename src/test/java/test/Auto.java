@@ -11,18 +11,28 @@ public class Auto {
 	
 	static int cantidadCreados;
 	
+	//Corregido
 	public int cantidadAsientos() {
-		return asientos.length;
+		int contadorAsientos = 0;
+		for(Asiento asiento:asientos) {
+			if (asiento instanceof Asiento) {
+				contadorAsientos++;
+			}
+		}
+		return contadorAsientos;
 	}
 	
+	//Malo
 	public String verificarIntegridad() {
 		
 		String mensajeValidacion = null;
 		
 		for(Asiento asiento:asientos) {
-			mensajeValidacion = (asiento.registro == this.registro && this.registro == motor.registro)? "Auto original" : "Las piezas no son originales";
-			if (mensajeValidacion == "Las piezas no son originales") {
-				break;
+			if (asiento instanceof Asiento) {
+				mensajeValidacion = (asiento.registro == this.registro && this.registro == motor.registro)? "Auto original" : "Las piezas no son originales";
+				if (mensajeValidacion == "Las piezas no son originales") {
+					break;
+				}
 			}
 		}
 		

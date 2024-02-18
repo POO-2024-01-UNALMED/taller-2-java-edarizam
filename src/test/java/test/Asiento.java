@@ -5,20 +5,18 @@ public class Asiento {
 	int precio;
 	int registro;
 	
+	//Corregido
 	public void cambiarColor(String color) {
 		
-		color = color.toLowerCase();
-		
-		/* 
-		boolean validarColor = (color == "rojo" ||color == "amarillo" || color == "verde" || color == "negro" || color == "blanco")? true : false;
+		boolean validarColor = (color.equalsIgnoreCase("rojo") ||color.equalsIgnoreCase("amarillo") || color.equalsIgnoreCase("verde") || color.equalsIgnoreCase("negro") || color.equalsIgnoreCase("blanco"))? true : false;
 		if (validarColor){
 			System.out.println("El color ha sido cambiado a: " + color);
 		}else{
 			System.out.println("El color no puede ser cambiado a: " + color);
 			color = null;
 		}
-		*/
-		
+
+		/*
 		switch(color) {
 		case "rojo":
 			break;
@@ -32,6 +30,7 @@ public class Asiento {
 			break;
 		default:
 			color = null;
+		*/
 		}
 	}
-}
+
